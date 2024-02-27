@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -16,6 +17,9 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'images/[name]-[hash][ext]'
+        }
       },
       {
         test: /\.s[ac]ss$/i,
@@ -28,6 +32,17 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.html$/i,
+        use: 'html-loader'
+      },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+        template: 'src/index.html',
+        filename: 'index.html',
+        inject: false
+    })
+  ],
 };
