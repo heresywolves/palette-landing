@@ -34,11 +34,13 @@ header {
     @include reset-list;
     z-index: 2;
     position: relative;
-    font-size: 10px;
+    font-size: 12px;
     color: white;
     display: flex;
-    padding: 30px 50px;
+    padding: 20px 50px;
     gap: 24px;
+    background-color: rgba(31, 30, 30, 0.6);
+    margin: 10px;
   }
 
   .header__link:nth-child(5) {
@@ -49,9 +51,30 @@ header {
     content: "(0)";
     margin-left: 8px;
   }
-}
 
+  .header_title {
+    font-size: 63px;
+    font-weight: 400;
+    color: white;
+    width: 500px;
+    position: relative;
+    z-index: 2;
+    padding-left: 50px;
+    margin-top: 45px;
+    margin-bottom: 28px;
+    line-height: 1.1;
+  }
 
-.content .content-paragraph:not(.content-paragraph:last-child) {
-  color: red;
+  .header_store-button {
+    position: relative;
+    z-index: 2;
+    height: 38px;
+    margin-left: 50px;
+    width: 200px;
+    color: white;
+    font-size: 12px;
+    background-color: #1F1E1E;
+    border: none;
+  }
+
 }
